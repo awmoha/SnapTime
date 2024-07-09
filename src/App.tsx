@@ -1,16 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './views/Login'
-function App() {
-  const [count, setCount] = useState(0)
+import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Login from "./pages/Login";
+import Tabell from "./pages/Tabell";
+import Navbar from "./Navbar/NavBar";
 
+const App: React.FC = () => {
   return (
     <>
-      <Login/> 
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Outlet />}>
+          <Route index element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/tabell" element={<Tabell />} />
+          {/* Lägg till fler routes här */}
+        </Route>
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
