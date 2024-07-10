@@ -1,10 +1,10 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../redux/authSlice';
+import { logout } from '../redux/Slice/authSlice';
 import { auth } from '../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
-import { RootState } from '../redux/store';
+import { RootState } from '../redux/store/store';
 
 const NavBar: React.FC = () => {
   const dispatch = useDispatch();

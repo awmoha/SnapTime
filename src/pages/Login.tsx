@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { RootState } from '../redux/store';
-import { updateEmail, updatePassword, loginRequest } from '../redux/authSlice';
+import { RootState } from '../redux/store/store';
+import { updateEmail, updatePassword, loginRequest } from '../redux/Slice/authSlice';
 import { TextField, Button, Container, Typography } from '@mui/material';
 
 const Login: React.FC = () => {

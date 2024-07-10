@@ -1,8 +1,8 @@
 import { call, put, select, takeLatest, all } from 'redux-saga/effects';
-import { loginRequest, loginSuccess, loginFailure } from '../authSlice';
+import { loginRequest, loginSuccess, loginFailure } from '../Slice/authSlice';
 import { auth } from '../../firebaseConfig';
 import { signInWithEmailAndPassword, UserCredential } from 'firebase/auth';
-import { RootState } from '../store'; 
+import { RootState } from '../store/store'; 
 
 function* loginSaga() {
   try {
